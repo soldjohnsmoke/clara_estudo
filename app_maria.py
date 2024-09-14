@@ -15,7 +15,7 @@ repo_url = "https://api.github.com/repos/soldjohnsmoke/clara_estudo/contents/3_t
 
 
 def get_repo_files(repo_url):
-    headers = {"Authorization": st.secrets['chave_git']}
+    headers = {"Authorization": st.secrets.chave.chave_git}
     response = requests.get(repo_url, headers=headers)
     if response.status_code == 200:
         return response.json()
