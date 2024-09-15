@@ -27,15 +27,6 @@ def get_repo_files(repo_url):
         st.error("Failed to retrieve files from GitHub repository")
         return []
 
-def get_repo_files(repo_url):
-    headers = {"Authorization": f"token {st.secrets.chave.chave_git}"}
-    response = requests.get(repo_url, headers=headers)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        st.error("Failed to retrieve files from GitHub repository")
-        return []
-
 files = get_repo_files(repo_url)
 
 if files:
