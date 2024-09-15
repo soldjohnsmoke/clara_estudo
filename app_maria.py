@@ -18,8 +18,8 @@ def get_repo_files(repo_url):
     response = requests.get(repo_url, headers=headers)
     
     # Verifique o status e o conteúdo da resposta
-    st.write(f"Status code: {response.status_code}")
-    st.write(response.json())  # Exibe a resposta JSON para verificar o que está sendo retornado
+    # st.write(f"Status code: {response.status_code}")
+    # st.write(response.json())  # Exibe a resposta JSON para verificar o que está sendo retornado
 
     if response.status_code == 200:
         return response.json()
